@@ -146,7 +146,7 @@
 		box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 	}
 	h1 {
-		color: #333;
+		color: #334;
 		font-size: 24px;
 		margin-bottom: 20px;
 	}
