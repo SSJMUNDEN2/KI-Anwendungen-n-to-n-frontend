@@ -119,7 +119,7 @@ function handleSubmit() {
 
         PUBLIC_BASE_URL +
 
-        "/api/predict/apartment/?bfs_number=" +
+        "/api/prediction/apartment?bfs_number=" +
 
         selected.id +
 
