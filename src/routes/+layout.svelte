@@ -1,4 +1,3 @@
-[14:29] Husic Abedin (husicabe)
 <script>
 
   import "./styles.css";
