@@ -124,10 +124,11 @@
         rooms;
     console.log(url);
     axios.get(url).then((response) => {
-        price = 'CHF ' + response.data;
-    }).catch((error) => {
-        console.error('Error fetching data:', error);
-    });
+    price = 'CHF ' + response.data.prediction; // Zugriff auf das prediction-Attribut des Antwortobjekts
+    console.log("Price updated to:", price);
+}).catch((error) => {
+    console.error('Error fetching data:', error);
+});
 }
  
 </script>
