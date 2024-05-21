@@ -113,21 +113,36 @@
 	let area;
 	let price = '...'
 	let selected;
-	function handleSubmit() {
+function handleSubmit() {
+
     let url =
+
         PUBLIC_BASE_URL +
-        "/api/predict/apartment=" +
+
+        "/api/predict/apartment/?bfs_number=" +
+
         selected.id +
+
         "&area=" +
+
         area +
+
         "&rooms=" +
+
         rooms;
+
     console.log(url);
+
     axios.get(url).then((response) => {
+
         price = 'CHF ' + response.data;
+
     }).catch((error) => {
+
         console.error('Error fetching data:', error);
+
     });
+
 }
 </script>
 
