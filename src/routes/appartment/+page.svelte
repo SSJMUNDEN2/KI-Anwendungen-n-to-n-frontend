@@ -137,70 +137,70 @@
 </script>
 
 <style>
-    .container {
-        background-color: #f7f7f7;
-        padding: 20px;
-        border-radius: 10px;
-        max-width: 800px;
-        margin: 20px auto;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    }
-    h1 {
-        color: #334;
-        font-size: 24px;
-        margin-bottom: 20px;
-    }
-    .form-control, .form-select, .btn {
-        border-radius: 5px;
-    }
-    .form-control {
-        border: 1px solid #ccc;
-        padding: 10px;
-    }
-    .form-select {
-        border: 1px solid #ccc;
-        padding: 10px;
-    }
-    .btn-primary {
-        background-color: #04ff00;
-        border: none;
-        color: #fff;
-        padding: 10px 20px;
-        margin-right: 10px;
-        cursor: pointer;
-    }
-    .btn-secondary {
-        background-color: #6c757d;
-        border: none;
-        color: #fff;
-        padding: 10px 20px;
-        cursor: pointer;
-    }
+	.container {
+		background-color: #f7f7f7;
+		padding: 20px;
+		border-radius: 10px;
+		max-width: 800px;
+		margin: 20px auto;
+		box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+	}
+	h1 {
+		color: #334;
+		font-size: 24px;
+		margin-bottom: 20px;
+	}
+	.form-control, .form-select, .btn {
+		border-radius: 5px;
+	}
+	.form-control {
+		border: 1px solid #ccc;
+		padding: 10px;
+	}
+	.form-select {
+		border: 1px solid #ccc;
+		padding: 10px;
+	}
+	.btn-primary {
+		background-color: #04ff00;
+		border: none;
+		color: #fff;
+		padding: 10px 20px;
+		margin-right: 10px;
+		cursor: pointer;
+	}
+	.btn-secondary {
+		background-color: #6c757d;
+		border: none;
+		color: #fff;
+		padding: 10px 20px;
+		cursor: pointer;
+	}
 </style>
 
 <div class="container text-center">
-    <h1>Are you paying too much? Our model predicts that you should be paying {$price}</h1>
+	<h1>Are you paying too much? Our model predicts that you should be paying {price}</h1>
 
-    <div class="row justify-content-md-center">
-        <div class="col col-lg-2">
-            <input type="number" class="form-control" placeholder="Area" bind:value={$area}>
-        </div>
-        <div class="col col-lg-2">
-            <input type="number" class="form-control" placeholder="Rooms" bind:value={$rooms}>
-        </div>
-        <div class="col col-lg-2">
-            <select class="form-select" bind:value={selected}>
-                <option value="">City</option>
-                {#each bfs_number_names as bfs}
-                    <option value={bfs}>
-                        {bfs.name}
-                    </option>
-                {/each}
-            </select>
-        </div>
-        <div class="col-md-auto">
-            <button type="button" class="btn btn-primary" on:click={handleSubmit}>Price Estimation</button>
-            <button type="button" class="btn btn-secondary" on:click={handleReset}>Reset</button>
-        </div>
-    </div>
+	<div class="row justify-content-md-center">
+	  <div class="col col-lg-2">
+		<input type="number" class="form-control" placeholder="Area" aria-label="area" bind:value={area}>
+	  </div>
+	  <div class="col col-lg-2">
+		<input type="number" class="form-control" placeholder="Rooms" aria-label="rooms" bind:value={rooms}>
+	  </div>
+	  <div class="col col-lg-2">
+		<select class="form-select" bind:value={selected}>
+			<option value="">City</option>
+			{#each bfs_number_names as bfs}
+				<option value={bfs}>
+					{bfs.name}
+				</option>
+			{/each}
+		</select>
+	  </div>
+	  <div class="col-md-auto">
+		<button type="button" class="btn btn-primary" on:click={handleSubmit}>Price Estimation</button>
+		<button type="button" class="btn btn-secondary" on:click={handleReset}>Reset</button>
+	  </div>
+	</div>
 </div>
