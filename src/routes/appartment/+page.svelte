@@ -116,7 +116,7 @@
 function handleSubmit() {
     let url =
         PUBLIC_BASE_URL +
-        "/api/prediction/apartment?bfs_number=" +
+        "/api/predict/?bfs_number=" +
         selected.id +
         "&area=" +
         area +
@@ -124,7 +124,7 @@ function handleSubmit() {
         rooms;
     console.log(url);
     axios.get(url).then((response) => {
-        price = 'CHF ' + response.data.prediction;  // Stellen Sie sicher, dass Sie auf das richtige Attribut im Antwortobjekt zugreifen
+        price = 'CHF ' + response.data;
     }).catch((error) => {
         console.error('Error fetching data:', error);
     });
